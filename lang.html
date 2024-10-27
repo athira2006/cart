@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Selection</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 500px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2em;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .language-button {
+            display: block;
+            margin: 15px auto;
+            padding: 15px;
+            background-color: #28a745; /* Updated to a contrasting color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 100%;
+            max-width: 300px;
+            animation: slideIn 0.5s forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .language-button:hover {
+            background-color: #218838; /* Darker shade for hover */
+            transform: translateY(-2px);
+        }
+
+        .language-button:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Your Language</h1>
+        <button class="language-button" onclick="selectLanguage('home.html')">English</button>
+        <button class="language-button" onclick="selectLanguage('spanish.html')">Spanish</button>
+        <button class="language-button" onclick="selectLanguage('french.html')">French</button>
+        <button class="language-button" onclick="selectLanguage('german.html')">German</button>
+    </div>
+
+    <script>
+        function selectLanguage(language) {
+            window.location.href = language;
+        }
+    </script>
+</body>
+</html>
